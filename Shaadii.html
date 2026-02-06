@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding of Anmol & Vikas</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      /* BACKGROUND FOR ENTIRE WEBSITE (EXCEPT HEADER) */
+      background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("WhatsApp Image 2026-02-06 at 16.02.48.jpeg"); /* change image name if needed */
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* HERO SECTION */
+    header {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("WhatsApp Image 2026-02-06 at 13.03.47.jpeg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      animation: slideDown 1.2s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      animation: fadeIn 2s ease;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #c0392b;
+    }
+
+    /* COUPLE CARDS */
+    .couple {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* STORY */
+    .story {
+      background: rgba(255, 245, 245, 0.9);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    /* EVENTS */
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .event {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event::after {
+      content: "→";
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .event:hover {
+      transform: scale(1.05);
+      background: rgba(255, 243, 243, 0.95);
+    }
+
+    .event:hover::after {
+      opacity: 1;
+    }
+
+    .event a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    footer {
+      background: #c0392b;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Anmol ❤ Vikas</h1>
+    <p>We are getting married!</p>
+    <p><strong>Date:</strong> DD Month YYYY | <strong>Venue:</strong> Wedding Location</p>
+  </header>
+
+  <section>
+    <h2># Ki & Ka</h2>
+    <div class="couple">
+
+      <div class="card">
+        <img src="WhatsApp Image 2026-02-06 at 12.37.09.jpeg" alt="Bride">
+        <h3>Anmol Kadyan</h3>
+        <p>Daughter of Mr. Amit Kumar Kadyan & Mrs. Priya Kadyan</p>
+      </div>
+
+      <div class="card">
+        <img src="WhatsApp Image 2026-02-06 at 12.37.10.jpeg" alt="Groom">
+        <h3>Vikas Kirola</h3>
+        <p>Son of Mr. Kirola & Mrs. Anita Kirola</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Story</h2>
+    <div class="story">
+      <p>Sometimes, the most beautiful stories begin unexpectedly. What started as a simple meeting slowly turned into endless conversations, shared laughter, and a bond that felt like home.</p>
+      <p>Friendship soon grew into love. Through every high and low, we stood by each other and realized that life is better together.</p>
+      <p>With love in our hearts and blessings from our families, we are excited to begin this forever journey. Thank you for being part of our story. 💖</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Wedding Events</h2>
+    <div class="events">
+
+      <div class="event">
+        <a href="haldi.html">
+          <h3>Haldi Ceremony</h3>
+          <p>Date & Time</p>
+          <p>Location</p>
+        </a>
+      </div>
+
+      <div class="event">
+        <a href="mehendi.html">
+          <h3>Mehendi Ceremony</h3>
+          <p>Date & Time</p>
+          <p>Location</p>
+        </a>
+      </div>
+
+      <div class="event">
+        <a href="wedding.html">
+          <h3>Wedding Ceremony</h3>
+          <p>Date & Time</p>
+          <p>Location</p>
+        </a>
+      </div>
+
+      <div class="event">
+        <a href="reception.html">
+          <h3>Reception</h3>
+          <p>Date & Time</p>
+          <p>Location</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>With love ❤️ from Anmol & Vikas</p>
+  </footer>
+
+</body>
+</html>
