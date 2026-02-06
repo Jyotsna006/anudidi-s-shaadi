@@ -13,16 +13,13 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-      /* BACKGROUND FOR ENTIRE WEBSITE (EXCEPT HEADER) */
       background:
-        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-        url("WhatsApp Image 2026-02-06 at 16.02.48.jpeg"); /* change image name if needed */
-
+        linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+        url("WhatsApp Image 2026-02-06 at 16.02.48.jpeg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      color: #333;
+      color: black; 
     }
 
     /* HERO SECTION */
@@ -32,7 +29,7 @@
         url("WhatsApp Image 2026-02-06 at 13.03.47.jpeg");
       background-size: cover;
       background-position: center;
-      color: white;
+      color: lavender;
       text-align: center;
       padding: 140px 20px;
       animation: fadeIn 1.5s ease-in-out;
@@ -59,7 +56,8 @@
     h2 {
       text-align: center;
       margin-bottom: 40px;
-      color: #c0392b;
+      color: maroon; 
+      font-size:2rem;
     }
 
     /* COUPLE CARDS */
@@ -85,17 +83,20 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
+
     .card img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
+      border: 4px solid gold;
+      box-shadow: 0 0 15px gold;
     }
 
     /* STORY */
     .story {
-      background: rgba(255, 245, 245, 0.9);
+      background: rgba(255, 245, 245, 0.9); /* very light pink */
       border-radius: 12px;
       padding: 35px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -113,7 +114,7 @@
     }
 
     .event {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.9); /* white with opacity */
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -135,8 +136,12 @@
 
     .event:hover {
       transform: scale(1.05);
+      background: rgba(255, 243, 243, 0.95); /* very light pink */
+      transform: scale(1.05);
       background: rgba(255, 243, 243, 0.95);
-    }
+      box-shadow: 0 0 15px gold;
+   }
+
 
     .event:hover::after {
       opacity: 1;
@@ -149,13 +154,61 @@
       height: 100%;
     }
 
+    /* FULL-FLOWER YELLOW GLOWING EMOJI DIVIDER WITH FLOAT */
+    .emoji-divider-full {
+      text-align: center; /* centers the emojis */
+      margin: 60px 0;
+      font-size: 28px;
+      line-height: 1.5;
+      letter-spacing: 6px;
+    }
+
+    .emoji-divider-full span {
+      display: inline-block; /* float without breaking centering */
+      text-shadow:
+        0 0 5px lightyellow,
+        0 0 10px lightyellow,
+        0 0 15px yellow,
+        0 0 20px yellow,
+        0 0 25px gold;
+      animation: glow 2.5s ease-in-out infinite, float 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { 
+        text-shadow:
+          0 0 5px lightyellow,
+          0 0 10px lightyellow,
+          0 0 15px yellow,
+          0 0 20px yellow,
+          0 0 25px gold;
+      }
+      50% { 
+        text-shadow:
+          0 0 10px lightyellow,
+          0 0 15px lightyellow,
+          0 0 20px yellow,
+          0 0 25px yellow,
+          0 0 30px gold;
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
     footer {
-      background: #c0392b;
+      background: pink; /* changed from #c0392b */
       color: white;
       text-align: center;
       padding: 25px;
       margin-top: 60px;
+      font-size:1.2rem;
+      letter-spacing: 2px;
     }
+
 
     /* ANIMATIONS */
     @keyframes fadeIn {
@@ -172,8 +225,30 @@
       from { transform: translateY(40px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
+    /* MOBILE TWEAKS */
+    @media (max-width: 600px) {
+      .emoji-divider-full {
+        font-size: 22px;
+        letter-spacing: 3px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
+
+
+
+
+
+
 
 <body>
 
@@ -186,7 +261,6 @@
   <section>
     <h2># Ki & Ka</h2>
     <div class="couple">
-
       <div class="card">
         <img src="WhatsApp Image 2026-02-06 at 12.37.09.jpeg" alt="Bride">
         <h3>Anmol Kadyan</h3>
@@ -196,11 +270,15 @@
       <div class="card">
         <img src="WhatsApp Image 2026-02-06 at 12.37.10.jpeg" alt="Groom">
         <h3>Vikas Kirola</h3>
-        <p>Son of Mr. Kirola & Mrs. Anita Kirola</p>
+        <p>Son of Mr. Kishan Kirola & Mrs. Anita Kirola</p>
       </div>
-
     </div>
   </section>
+
+  <!-- FULL-FLOWER YELLOW GLOW DIVIDER -->
+  <div class="emoji-divider-full">
+    <span>🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸</span>
+  </div>
 
   <section>
     <h2>Our Story</h2>
@@ -210,6 +288,11 @@
       <p>With love in our hearts and blessings from our families, we are excited to begin this forever journey. Thank you for being part of our story. 💖</p>
     </div>
   </section>
+
+  <!-- FULL-FLOWER YELLOW GLOW DIVIDER -->
+  <div class="emoji-divider-full">
+    <span>🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸</span>
+  </div>
 
   <section>
     <h2>Wedding Events</h2>
@@ -250,8 +333,61 @@
     </div>
   </section>
 
-  <footer>
-    <p>With love ❤️ from Anmol & Vikas</p>
+  <!-- FULL-FLOWER YELLOW GLOW DIVIDER -->
+  <div class="emoji-divider-full">
+    <span>🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸</span>
+  </div>
+
+<!-- VENUE SECTION -->
+<section>
+  <h2>Wedding Venue</h2>
+  <p style="text-align:center;">
+    Wedding Location Name<br>
+    City, State
+  </p>
+
+  <div style="margin-top:20px;">
+    <iframe
+      src="https://www.google.com/maps?q=rampur&output=embed"
+      width="100%"
+      height="300"
+      style="border:0;border-radius:12px;"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<div class="emoji-divider-full">
+  <span>🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸 🪷 🌸</span>
+</div>
+
+<!-- HASHTAG -->
+<section>
+  <h2>#AnmolWedsVikas</h2>
+</section>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div onclick="toggleMusic()" 
+     style="position:fixed;bottom:20px;right:20px;
+            background:pink;color:white;
+            padding:15px;border-radius:50%;
+            cursor:pointer;box-shadow:0 0 10px gold;">
+  🎵
+</div>
+
+<script>
+/* MUSIC TOGGLE */
+function toggleMusic() {
+  const music = document.getElementById("bgMusic");
+  music.paused ? music.play() : music.pause();
+}
+</script>
+ <footer>
+    <p>🌷With love from Anmol & Vikas 🌷</p>
   </footer>
 
 </body>
