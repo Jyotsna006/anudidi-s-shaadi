@@ -367,25 +367,19 @@
 </section>
 
 <!-- MUSIC -->
-<audio id="bgMusic" loop>
+<audio id="bgMusic" autoplay loop muted>
   <source src="ReelAudio-15571.mp3" type="audio/mpeg">
 </audio>
 
-<div onclick="toggleMusic()" 
-     style="position:fixed;bottom:20px;right:20px;
-            background:pink;color:white;
-            padding:15px;border-radius:50%;
-            cursor:pointer;box-shadow:0 0 10px gold;">
-  🎵
-</div>
-
 <script>
-/* MUSIC TOGGLE */
-function toggleMusic() {
-  const music = document.getElementById("bgMusic");
-  music.paused ? music.play() : music.pause();
-}
+  // Unmute & ensure play on first user interaction
+  document.addEventListener("click", function () {
+    const music = document.getElementById("bgMusic");
+    music.muted = false;
+    music.play();
+  }, { once: true });
 </script>
+
  <footer>
     <p>🌷With love from Anmol & Vikas 🌷</p>
   </footer>
